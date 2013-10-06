@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem "cancan"
 gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
 gem 'will_paginate'
 gem 'carrierwave'
 
@@ -38,7 +39,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '0.12.2'
+  # gem 'pg', '0.12.2'
 end
 
 group :ubuntu do
