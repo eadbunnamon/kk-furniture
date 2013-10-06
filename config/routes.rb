@@ -1,4 +1,5 @@
 FurnitureStore::Application.routes.draw do
+  root to: "homes#index"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -8,8 +9,6 @@ FurnitureStore::Application.routes.draw do
     get "sign_in", :to => "devise/sessions#new"
     get "sign_out", :to => "devise/sessions#destroy"
   end
-
-  root to: "homes#index"
 
   resources :homes, only: :index
 end
