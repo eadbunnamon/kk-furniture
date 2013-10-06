@@ -18,13 +18,13 @@ html, body {
 
 #wrap {
   position: relative;
-  max-width: 1024px;
+  max-width: 959px;
   width: 100%;
   min-height: 100%;
   margin: 0 auto; 
   overflow: hidden;
   background-color: #FFF;
-  padding: 15px;
+  padding: 0 120px;
 }
 
 .error {
@@ -33,4 +33,68 @@ html, body {
 
 .notice {
   color: blue;
+}
+
+#header {
+  overflow: hidden;
+  background-color: grey;
+
+  ul {
+    list-style: none;
+
+    li {
+      float: left;
+      display: list-item;
+      width: 30%;
+    }
+
+    li.head-search {
+      position: relative;
+    }
+  }
+}
+
+.page {
+  max-width: 959px;
+  width: 100%;
+  padding: 0 120px;
+}
+
+.clearfix {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+#head-menu {
+  overflow: hidden;
+  background-color: azure;
+
+  ul {
+    list-style: none;
+
+    li {
+      padding-right: 20px;
+    }
+  }
+
+  ul.left {
+    li {
+      float: left;
+    }
+  }
+
+  ul.right {
+    li {
+      float: right;
+    }
+  }
 }
