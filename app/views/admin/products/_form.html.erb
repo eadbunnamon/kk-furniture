@@ -1,0 +1,26 @@
+<div id="main_content">
+    <h4>Products</h4>
+    <%= semantic_form_for [:admin, @product] do |f| %>
+    <fieldset class="inputs">
+    	<ol>
+    		<li id="product_name_input" class="string input required stringish">
+    			<label>Name <abbr title="required">*</abbr></label>
+    			<%= f.text_field :name, required: true %>
+    		</li>
+    		<li>
+    			<label>Price <abbr title="required">*</abbr></label>
+    			<%= f.number_field	:price, required: true %>
+    		</li>    	
+    	</ol>    	
+    </fieldset>
+
+    <div>
+        <fieldset class="actions">
+        <ol>
+            <li><%= f.submit "Save" %></li>            
+        </ol>
+        </fieldset>
+	</div>
+        
+    <% end %>
+</div>
