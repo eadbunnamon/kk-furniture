@@ -38,7 +38,9 @@ ActiveAdmin.register Product do
       end               
       row :detail              
       row :best_seller              
-      row :category_id    
+      row :category do |product|
+        product.category.present? ? product.category.name : "อื่น ๆ"
+      end  
     end
   end
 
