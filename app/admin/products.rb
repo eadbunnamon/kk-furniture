@@ -4,12 +4,15 @@ ActiveAdmin.register Product do
   config.per_page = 25
 
   index do                            
-    column :name                     
-    column :price              
+    column :name
+    column :price do |product|
+      div :class => "price" do
+        number_to_currency product.price, :unit => "฿"
+      end
+    end               
     column :detail              
     column :best_seller              
-    column :category_id
-    column :room_id              
+    column :category_id       
     default_actions                   
   end
 
@@ -21,7 +24,21 @@ ActiveAdmin.register Product do
       f.input :detail
       f.input :description
       f.input :category_id, label: 'Category', as: :select, prompt: "เลือก", collection: Category.all.map{|c| ["#{c.name}", c.id]}
-      f.input :room_id, label: 'Room', as: :select, prompt: "เลือก", collection: Room.all.map{|r| ["#{r.name}", r.id]}
+      f.actions
+    end
+  end
+
+  show do |product|
+    attributes_table do
+      row :name
+      row :price do |product|
+        div :class => "price" do
+          number_to_currency product.price, :unit => "฿"
+        end
+      end               
+      row :detail              
+      row :best_seller              
+      row :category_id    
     end
   end
 
