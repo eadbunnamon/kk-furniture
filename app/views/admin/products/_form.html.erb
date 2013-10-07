@@ -1,6 +1,6 @@
 <div id="main_content">
   <h4>Products</h4>
-  <%= semantic_form_for [:admin, @product], :html => { :enctype => "multipart/form-data" } do |f| %>
+  <%= semantic_form_for [:admin, @product], validate: true, :html => { :enctype => "multipart/form-data" } do |f| %>
   <fieldset class="inputs">
   	<ol>
   		<li id="product_name_input" class="string input required stringish">

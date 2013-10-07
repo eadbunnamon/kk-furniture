@@ -17,35 +17,30 @@ ActiveAdmin.register Product do
   end
 
   form :partial => "form"
-  # form :html => { :enctype => "multipart/form-data" } do |f|
-  #   f.inputs do
-  #     f.input :name
-  #     f.input :price
-  #     f.input :best_seller
-  #     f.input :detail
-  #     f.input :description
-  #     f.input :category_id, label: 'Category', as: :select, prompt: "เลือก", collection: Category.all.map{|c| ["#{c.name}", c.id]}
-  #     f.actions
-  #   end
-  # end
 
   controller do
     def create
-      product = Product.new(params[:product])
-      product.rooms = Room.find(params[:rooms])
-      if product.save
-        redirect_to admin_product_path(product)
+      params[:rooms] = params[:rooms].compact
+      params[:product][:price] = params[:product][:price].to_s.gsub(/,/, '').to_f
+
+      @product = Product.new(params[:product])
+      @product.rooms = Room.where(id: params[:rooms])
+      if @product.save
+        redirect_to admin_product_path(@product)
       else
         render('new')
       end
     end
 
     def update
-      product = Product.find(params[:id])
-      product.assign_attributes(params[:product])
-      product.rooms = Room.find(params[:rooms])
-      if product.save
-        redirect_to admin_product_path(product)
+      params[:rooms] = params[:rooms].compact
+      params[:product][:price] = params[:product][:price].to_s.gsub(/,/, '').to_f
+
+      @product = Product.find(params[:id])
+      @product.assign_attributes(params[:product]) 
+      @product.rooms = Room.where(id: params[:rooms])
+      if @product.save
+        redirect_to admin_product_path(@product)
       else
         render('edit')
       end
