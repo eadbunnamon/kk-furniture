@@ -4,6 +4,21 @@ html, body {
   height: 100%;
   width: 100%;
   font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.head-bg {
+  height: 15%;
+  border-bottom: 1px solid #E4E4E4;  
+  background-color: #F5F5F5;
+
+  .page {
+    height: 100%;
+    max-width: 960px;
+    width: 100%;    
+    margin: 0 auto;
+  }
 }
 
 #main-container {
@@ -13,12 +28,12 @@ html, body {
   position: relative;
   background-color: #FFF;
   overflow: hidden;
-  min-height: 85%;
+  min-height: 70%;
 }
 
 #wrap {
   position: relative;
-  max-width: 959px;
+  max-width: 960px;
   width: 100%;
   min-height: 100%;
   margin: 0 auto; 
@@ -37,7 +52,7 @@ html, body {
 
 #header {
   overflow: hidden;
-  background-color: grey;
+  height: 70px;
 
   ul {
     list-style: none;
@@ -54,10 +69,8 @@ html, body {
   }
 }
 
-.page {
-  max-width: 959px;
-  width: 100%;
-  padding: 0 120px;
+.content {
+  padding: 15px;
 }
 
 .clearfix {
@@ -76,10 +89,11 @@ html, body {
 
 #head-menu {
   overflow: hidden;
-  background-color: azure;
 
   ul {
     list-style: none;
+    padding-left: 0;
+    margin: 10px 0;
 
     li {
       padding-right: 20px;
@@ -95,6 +109,18 @@ html, body {
   ul.right {
     li {
       float: right;
+      padding-right: 0;
     }
   }
+}
+
+.footer-container {
+  min-height: 14%;
+  overflow: hidden;
+  border-top: 4px solid #6A48D7;
+  background-color: #DDD;
+}
+
+#footer {
+  padding: 15px;
 }
