@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
 	belongs_to :category
-	belongs_to :room
+	has_and_belongs_to_many :rooms
 
 	validates :name, presence: true
 	validates :price, presence: true
