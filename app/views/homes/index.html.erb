@@ -1,3 +1,65 @@
-Welcome!!
+<div id="myCarousel" class="carousel slid">
+    <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	    <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+	    <div class="active item"><%= image_tag "title03.jpg", class: "img-slider" %></div>
+	    <div class="item"><%= image_tag "title04.jpg", class: "img-slider" %></div>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
 
-<%= current_user.email if user_signed_in? %>
+<!-- Promotion -->
+<div id="promotions" class="border-bottom">
+	<p class="text-title bold">Promotions</p>	
+</div>
+
+<div class="products">
+	<div class="div-items-img">
+		<div><%= image_tag "test-01.jpg", class: "img-best-sellers" %></div>	
+		<div class="clearfix product-details bold">
+			<p>Sofa 555</p>
+			<p>$690</p>			
+		</div>
+	</div>
+	<div class="div-items-img">
+		<div><%= image_tag "test-02.jpg", class: "img-best-sellers" %></div>	
+		<div class="clearfix product-details bold">
+			<p>Sofa 555</p>
+			<p>$690</p>			
+		</div>
+	</div>
+	<div class="div-items-img">
+		<div><%= image_tag "test-03.jpg", class: "img-best-sellers" %></div>	
+		<div class="clearfix product-details bold">
+			<p>Sofa 555</p>
+			<p>$690</p>			
+		</div>
+	</div>
+	<div class="div-items-img">
+		<div><%= image_tag "test-04.jpg", class: "img-best-sellers" %></div>	
+		<div class="clearfix product-details bold">
+			<p>Sofa 555</p>
+			<p>$690</p>			
+		</div>
+	</div>
+</div>
+<!-- Promotion -->
+
+<!-- Best Sellers -->
+<div id="best-sellers"  class="border-bottom">
+	<p class="text-title bold">Best Sellers</p>
+</div>
+
+<div class="products">
+	<ul class="thumbnails">
+	    <li class="span4"><a href="#" class="thumbnail"><%= image_tag "test-01.jpg" %></a></li>
+	    <li class="span4"><a href="#" class="thumbnail"><%= image_tag "test-02.jpg" %></a></li>
+    </ul>
+</div>
+<!-- Best Sellers -->

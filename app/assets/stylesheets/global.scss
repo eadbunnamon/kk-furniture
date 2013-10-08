@@ -70,7 +70,7 @@ html, body {
 }
 
 .content {
-  padding: 15px;
+  padding: 25px 0;
 }
 
 .clearfix {
@@ -117,10 +117,66 @@ html, body {
 .footer-container {
   min-height: 14%;
   overflow: hidden;
-  border-top: 4px solid #6A48D7;
-  background-color: #DDD;
+  border-top: 4px solid #888;
+  background-color: #F5F5F5;
 }
 
 #footer {
   padding: 15px;
+}
+
+.img-slider {
+  height: 350px;
+  width: 960px;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid #F2F2F2;
+}
+
+.carousel {
+  box-shadow: 1px 1px 10px #888888;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #A4A4A4;
+}
+
+p.text-title {
+  text-align: center;
+}
+
+.promotions {
+  padding: 25px 0;
+  overflow: hidden;
+}
+
+.products {
+  padding: 25px 0;
+  overflow: hidden;
+}
+
+img.img-best-sellers {
+  width: 156px;
+  height: 156px;
+  overflow: hidden;
+}
+
+div.div-items-img {
+  float: left;
+  margin: 15px 44px 0 0;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.product-details {
+  p {
+    margin: 0;
+  }
 }
