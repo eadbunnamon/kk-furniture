@@ -1,0 +1,16 @@
+<div class='panel' id="photo_panel">
+  <h3>Upload photo</h3>
+  <div id='file_field'>
+    <%= form_for Photo.new, url: upload_photo_admin_product_path, method: "PUT", :html => {:multipart => true} do |f| %>
+    <%#= form_tag upload_photo_admin_product_path, method: "PUT", html: { multipart: true } do %>
+      <%= hidden_field_tag "product_id", @product.id %>
+      <%= f.file_field "photo", required: "true" %>
+      <%= f.submit "upload", id: "upload" %>
+    <% end %>
+  </div>
+  <div id='photos'>
+    <% @product.photos.each do |photo| %>
+      <%= image_tag photo.photo.url %>
+    <% end %>
+  </div>
+</div>

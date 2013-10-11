@@ -65,6 +65,17 @@ ActiveAdmin.register Product do
         product.rooms.map {|room| link_to room.name, admin_room_path(room) }.join(', ').html_safe
       end  
     end
+
+    render "add_photo"
   end
 
+  member_action :upload_photo, :method => :put do
+    product = Product.find(params[:product_id])
+    photo = Photo.new
+    photo.photo = params[:photo][:photo]
+    photo.product = product
+    photo.save
+
+    redirect_to admin_product_path(product, anchor: 'photo_panel')
+  end
 end
