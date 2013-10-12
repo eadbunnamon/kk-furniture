@@ -66,3 +66,25 @@ a.delete {
     display:block;
   }
 } 
+
+.room{
+  .categories {
+    overflow: hidden;
+
+    .product {
+      .remove_from_room {
+        display: none;
+      }
+
+      .product_label:hover {
+        .remove_from_room {
+          display: block;
+        }
+      }
+
+      .thumb-image:hover {
+        opacity: 0.4;
+      }
+    }
+  } 
+}

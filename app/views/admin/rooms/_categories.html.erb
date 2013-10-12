@@ -1,0 +1,18 @@
+<div class='room'>
+  <% categories = @room.products.map(&:category).uniq.compact %>
+  <% categories.each do |category| %>
+    <div class='panel categories'>
+      <h3><%= category.name %></h3>
+      <% category.products.each do |product| %>
+        <div class='product'>
+          <% example_photo = (product.photos.first.photo.thumb.url rescue "empty.png") %>
+          <label class='product_label'>
+            <%= product.name %>
+            <div class='remove_from_room'>Remove</div>
+          </label>
+          <!-- <div class='thumb-image' style='background-image:url(<%= example_photo %>);'></div> -->
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

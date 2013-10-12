@@ -6,6 +6,15 @@ ActiveAdmin.register Room do
     column :description              
     default_actions                   
   end 
+
+  show do |room|
+    attributes_table do
+      row :name
+      row :description
+    end
+
+    render "categories"
+  end
   
   filter :name
 end
