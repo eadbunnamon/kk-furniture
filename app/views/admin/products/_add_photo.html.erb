@@ -2,7 +2,6 @@
   <h3>Upload photo</h3>
   <div id='file_field'>
     <%= form_for Photo.new, url: upload_photo_admin_product_path, method: "PUT", :html => {:multipart => true} do |f| %>
-    <%#= form_tag upload_photo_admin_product_path, method: "PUT", html: { multipart: true } do %>
       <%= hidden_field_tag "product_id", @product.id %>
       <%= f.file_field "photo", required: "true" %>
       <%= f.submit "upload", id: "upload" %>
@@ -10,7 +9,9 @@
   </div>
   <div id='photos'>
     <% @product.photos.each do |photo| %>
-      <%= image_tag photo.photo.url %>
+      <div class='thumb-image' style='background-image:url(<%= photo.photo.thumb.url %>);'>
+      <%= link_to ' ', delete_photo_admin_product_path(photo_id: photo.id), method: "DELETE", class: "delete icon-white icon-remove", confirm: "Are you sure?" %>
+      </div>
     <% end %>
   </div>
 </div>

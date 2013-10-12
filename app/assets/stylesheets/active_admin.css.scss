@@ -28,7 +28,41 @@
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
 
+//= require bootstrap
 
 #rooms {
   min-width: 200px;
 }
+
+#photo_panel { overflow:auto; }
+
+.thumb-image {
+  height: 156px;
+  width: 156px;
+  margin: 10px !important;
+  display: inline-block;
+  border: 1px solid #E4E4E4;
+  float: left;
+  position: relative;
+}
+
+a.delete { 
+  display: none;
+  position:absolute;
+  top: 5px;
+  right: 5px;
+  width: 14px;
+  height: 14px;
+  text-indent: -999px;
+  color: red;
+  background-image: url("/assets/glyphicons-halflings.png");
+  background-position: -312px 0;
+}
+
+.thumb-image:hover {
+  opacity: 0.8;
+
+  a.delete { 
+    display:block;
+  }
+} 

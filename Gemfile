@@ -24,6 +24,7 @@ gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
 gem 'will_paginate'
 gem 'carrierwave'
+gem "rmagick", "~> 2.13.2"
 
 group :development, :test do
   # gem 'capybara'

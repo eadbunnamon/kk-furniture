@@ -78,4 +78,12 @@ ActiveAdmin.register Product do
 
     redirect_to admin_product_path(product, anchor: 'photo_panel')
   end
+
+  member_action :delete_photo, :method => :delete do
+    photo = Photo.find(params[:photo_id])
+    product = photo.product
+    photo.destroy
+
+    redirect_to admin_product_path(product, anchor: 'photo_panel')
+  end
 end
