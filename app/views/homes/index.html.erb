@@ -16,7 +16,7 @@
 
 <!-- Promotion -->
 <div id="promotions" class="border-bottom">
-	<p class="text-title bold">Promotions</p>
+	<p class="text-title bold">โปรโมชั่น</p>
 	<!-- <hr>	 -->
 </div>
 
@@ -24,21 +24,21 @@
 	<ul class="thumbnails">
 	    <li class="span4">
 		    <div class="thumbnail">
-		    <%= image_tag "color-basic-02.gif" %>
+		    <%= image_tag "test-01.jpg" %>
 		    <h3>Thumbnail label</h3>
 		    <p>Thumbnail caption...</p>
 		    </div>
 	    </li>
 	    <li class="span4">
 		    <div class="thumbnail">
-		    <%= image_tag "color-basic-02.gif" %>
+		    <%= image_tag "test-02.jpg" %>
 		    <h3>Thumbnail label</h3>
 		    <p>Thumbnail caption...</p>
 		    </div>
 	    </li>
 	    <li class="span4">
 		    <div class="thumbnail">
-		    <%= image_tag "color-basic-02.gif" %>
+		    <%= image_tag "test-03.jpg" %>
 		    <h3>Thumbnail label</h3>
 		    <p>Thumbnail caption...</p>
 		    </div>
@@ -49,7 +49,7 @@
 
 <!-- Best Sellers -->
 <div id="best-sellers"  class="border-bottom">
-	<p class="text-title bold">Best Sellers</p>
+	<p class="text-title bold">สินค้าขายดี</p>
 	<!-- <hr class="separate-title">	 -->
 </div>
 
@@ -57,11 +57,11 @@
 	<ul class="thumbnails">
 		<% (@best_sellers || []).each do |best| %>
 	    <li class="span4">
-	    	<div class="thumbnail">
+	    	<a href="" class="thumbnail">
 	    		<p class="corner-left"><%= number_to_currency(best.price, unit: "฿", precision: 0) %></p>
 	    		<%= image_tag best.photos.first.photo.thumb.url %>
 	    		<p class="text-center product-name"><%= best.name %></p>
-	    	</div>
+	    	</a>
 	    </li>
 	    <% end %>
     </ul>

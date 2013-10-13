@@ -10,5 +10,9 @@ FurnitureStore::Application.routes.draw do
     get "sign_out", :to => "devise/sessions#destroy"
   end
 
-  resources :homes, only: :index
+  resources :homes, only: :index do
+  	collection do
+  		get :all_furniture
+  	end
+  end
 end
