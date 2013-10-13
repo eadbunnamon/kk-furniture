@@ -8,7 +8,28 @@
           <% example_photo = (product.photos.first.photo.thumb.url rescue "empty.png") %>
           <label class='product_label'>
             <%= product.name %>
-            <div class='remove_from_room'>Remove</div>
+            <div class='remove_from_room'>
+              <%= link_to "Remove from this room", delete_product_admin_room_path(product_id: product.id, room_id: @room.id), method: "DELETE", confirm: "Are you sure?" %>
+            </div>
+          </label>
+          <!-- <div class='thumb-image' style='background-image:url(<%= example_photo %>);'></div> -->
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% other_products = @room.products.where(category_id: nil) %>
+  <% if other_products.count > 0 %>
+    <div class='panel categories'>
+      <h3><%= "Other" %></h3>
+      <% other_products.each do |product| %>
+        <div class='product'>
+          <% example_photo = (product.photos.first.photo.thumb.url rescue "empty.png") %>
+          <label class='product_label'>
+            <%= product.name %>
+            <div class='remove_from_room'>
+              <%= link_to "Remove from this room", delete_product_admin_room_path(product_id: product.id, room_id: @room.id), method: "DELETE", confirm: "Are you sure?" %>
+            </div>
           </label>
           <!-- <div class='thumb-image' style='background-image:url(<%= example_photo %>);'></div> -->
         </div>

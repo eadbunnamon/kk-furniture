@@ -74,11 +74,18 @@ a.delete {
     .product {
       .remove_from_room {
         display: none;
+        background-color: maroon;
+        padding: 5px;
+        a {
+          color: white;
+          font-weight: bold;
+          text-decoration: none;
+        }
       }
 
       .product_label:hover {
         .remove_from_room {
-          display: block;
+          display: inline;
         }
       }
 

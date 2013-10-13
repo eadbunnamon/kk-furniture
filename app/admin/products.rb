@@ -12,7 +12,12 @@ ActiveAdmin.register Product do
     end               
     column :detail              
     column :best_seller              
-    column :category_id       
+    column :category do |product|
+      product.category.name rescue "Other"
+    end             
+    column :room do |product|
+      product.rooms.map{ |room| link_to room.name, admin_room_path(room), target: "_blank" }.join(", ").html_safe
+    end  
     default_actions                   
   end
 
@@ -20,7 +25,7 @@ ActiveAdmin.register Product do
 
   controller do
     def create
-      params[:rooms] = params[:rooms].compact
+      params[:rooms] = (params[:rooms].compact rescue nil)
       params[:product][:price] = params[:product][:price].to_s.gsub(/,/, '').to_f
 
       @product = Product.new(params[:product])
