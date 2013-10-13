@@ -122,7 +122,21 @@ html, body {
 }
 
 #footer {
-  padding: 15px;
+  max-width: 960px;
+  width: 100%;    
+  margin: 15px auto;
+  overflow: hidden;
+}
+
+#footer-map {
+  width: 60%;
+  float: left;
+  display: inline-block;
+  margin-right: 30px;
+
+  img {
+    border: 1px solid #E4E4E4;
+  }
 }
 
 .img-slider {
@@ -214,4 +228,8 @@ div.div-items-img {
 
 .red {
   color: red;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
