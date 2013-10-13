@@ -6,8 +6,8 @@
     </ol>
     <!-- Carousel items -->
     <div class="carousel-inner">
-	    <div class="active item"><%= image_tag "title03.jpg", class: "img-slider" %></div>
-	    <div class="item"><%= image_tag "title04.jpg", class: "img-slider" %></div>
+	    <div class="active item"><%= image_tag "cover1.jpg", class: "img-slider" %></div>
+	    <div class="item"><%= image_tag "DSC_0003.JPG", class: "img-slider" %></div>
     </div>
     <!-- Carousel nav -->
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -16,50 +16,54 @@
 
 <!-- Promotion -->
 <div id="promotions" class="border-bottom">
-	<p class="text-title bold">Promotions</p>	
+	<p class="text-title bold">Promotions</p>
+	<!-- <hr>	 -->
 </div>
 
 <div class="products">
-	<div class="div-items-img">
-		<div><%= image_tag "test-01.jpg", class: "img-best-sellers" %></div>	
-		<div class="clearfix product-details bold">
-			<p>Sofa 555</p>
-			<p>$690</p>			
-		</div>
-	</div>
-	<div class="div-items-img">
-		<div><%= image_tag "test-02.jpg", class: "img-best-sellers" %></div>	
-		<div class="clearfix product-details bold">
-			<p>Sofa 555</p>
-			<p>$690</p>			
-		</div>
-	</div>
-	<div class="div-items-img">
-		<div><%= image_tag "test-03.jpg", class: "img-best-sellers" %></div>	
-		<div class="clearfix product-details bold">
-			<p>Sofa 555</p>
-			<p>$690</p>			
-		</div>
-	</div>
-	<div class="div-items-img">
-		<div><%= image_tag "test-04.jpg", class: "img-best-sellers" %></div>	
-		<div class="clearfix product-details bold">
-			<p>Sofa 555</p>
-			<p>$690</p>			
-		</div>
-	</div>
+	<ul class="thumbnails">
+	    <li class="span4">
+		    <div class="thumbnail">
+		    <%= image_tag "color-basic-02.gif" %>
+		    <h3>Thumbnail label</h3>
+		    <p>Thumbnail caption...</p>
+		    </div>
+	    </li>
+	    <li class="span4">
+		    <div class="thumbnail">
+		    <%= image_tag "color-basic-02.gif" %>
+		    <h3>Thumbnail label</h3>
+		    <p>Thumbnail caption...</p>
+		    </div>
+	    </li>
+	    <li class="span4">
+		    <div class="thumbnail">
+		    <%= image_tag "color-basic-02.gif" %>
+		    <h3>Thumbnail label</h3>
+		    <p>Thumbnail caption...</p>
+		    </div>
+	    </li>
+    </ul>
 </div>
 <!-- Promotion -->
 
 <!-- Best Sellers -->
 <div id="best-sellers"  class="border-bottom">
 	<p class="text-title bold">Best Sellers</p>
+	<!-- <hr class="separate-title">	 -->
 </div>
 
 <div class="products">
 	<ul class="thumbnails">
-	    <li class="span4"><a href="#" class="thumbnail"><%= image_tag "test-01.jpg" %></a></li>
-	    <li class="span4"><a href="#" class="thumbnail"><%= image_tag "test-02.jpg" %></a></li>
+		<% (@best_sellers || []).each do |best| %>
+	    <li class="span4">
+	    	<div class="thumbnail">
+	    		<p class="corner-left"><%= number_to_currency(best.price, unit: "฿", precision: 0) %></p>
+	    		<%= image_tag best.photos.first.photo.thumb.url %>
+	    		<p class="text-center product-name"><%= best.name %></p>
+	    	</div>
+	    </li>
+	    <% end %>
     </ul>
 </div>
 <!-- Best Sellers -->

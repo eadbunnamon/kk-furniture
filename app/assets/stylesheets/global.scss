@@ -117,7 +117,7 @@ html, body {
 .footer-container {
   min-height: 14%;
   overflow: hidden;
-  border-top: 4px solid #888;
+  border-top: 4px solid #0088CC;
   background-color: #F5F5F5;
 }
 
@@ -138,11 +138,16 @@ html, body {
 }
 
 .border-bottom {
-  border-bottom: 1px solid #A4A4A4;
+  hr.separate-title {
+    box-shadow: -5px -5px 20px #888888;
+    margin: 0;
+  }
 }
 
 p.text-title {
   text-align: center;
+  margin: 0;
+  color: #0088cc;
 }
 
 .promotions {
@@ -179,4 +184,29 @@ div.div-items-img {
   p {
     margin: 0;
   }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.product-name {
+  white-space: normal;
+  padding-top: 3px;
+  margin-bottom: 0;
+}
+
+.corner-left {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  position: absolute;
+}
+
+.line_through {
+  text-decoration:line-through;
+}
+
+.red {
+  color: red;
 }
