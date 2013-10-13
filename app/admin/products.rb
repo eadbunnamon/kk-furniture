@@ -3,6 +3,10 @@ ActiveAdmin.register Product do
   # form :partial => "form"
   config.per_page = 25
 
+  action_item :only => :show do
+    link_to('New Product', new_admin_product_path)
+  end
+
   index do                            
     column :name
     column :price do |product|
