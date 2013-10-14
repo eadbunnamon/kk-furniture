@@ -16,7 +16,13 @@ FurnitureStore::Application.routes.draw do
   	end
   end
 
-  resources :homes, only: :index
+  resources :homes, only: [:index, :show] do
+    collection do
+      get :newest_products
+      get :best_sellers
+      get :promotions
+    end
+  end
   resources :categories, only: [:index, :show]
   resources :rooms, only: [:index, :show]
   resources :categories, only: [:show]

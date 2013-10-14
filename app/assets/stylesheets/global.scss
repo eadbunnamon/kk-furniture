@@ -257,3 +257,21 @@ a:hover {
 a.border-none {
   border: 0 !important;
 }
+
+div.image_group {
+  width: 156px;
+  height: 156px;
+  margin: 0 auto;
+}
+
+.view-more {
+  margin-right: 5px;
+}
+
+a.thumbnail {
+  color: #333333;
+}
+
+ul.main-thum li a.thumbnail:hover {
+  border-color: #DDDDDD !important;
+}

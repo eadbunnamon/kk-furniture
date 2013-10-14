@@ -22,27 +22,29 @@
 </div>
 
 <div class="products clearfix">
-	<ul class="thumbnails">
+	<ul class="thumbnails main-thum">
 	    <li class="span4">
-		    <div class="thumbnail">
-		    <%= image_tag "test-01.jpg" %>
+		    <a href="<%= newest_products_homes_path %>" class="thumbnail">
+        <div class="image_group">
+            <%= image_tag("test-01.jpg") %>
+        </div>
 		    <h5 class="text-center">สินค้ามาใหม่</h5>
 		    <p class="text-center">หลากหลายรายการ รอให้คุณเลือกซื้อเลือกชม</p>
-		    </div>
+		    </a>
 	    </li>
 	    <li class="span4">
-		    <div class="thumbnail">
+		    <a href="#" class="thumbnail">
 		    <%= image_tag "test-02.jpg" %>
 		    <h5 class="text-center">โปรโมชั่น</h5>
 		    <p class="text-center">พบกับสินค้ามากมายลดราคาประจำเดือนนี้</p>
-		    </div>
+		    </a>
 	    </li>
 	    <li class="span4">
-		    <div class="thumbnail">
+		    <a href="<%= best_sellers_homes_path %>" class="thumbnail">
 		    <%= image_tag "test-03.jpg" %>
 		    <h5 class="text-center">สินค้าขายดี</h5>
 		    <p class="text-center">สินค้ายอดนิยมที่ผู้คนเลือกซื้อ</p>
-		    </div>
+		    </a>
 	    </li>
     </ul>
 </div>
