@@ -1,0 +1,12 @@
+<div class="border-bottom">
+	<p class="text-title bold left">คำถามที่พบบ่อย</p>
+	<!-- <hr>	 -->
+</div>
+<div class="clearfix">
+<% (@faqs || []).each do |faq| %>
+	<dl>
+	    <dt><%= faq.question %></dt>
+	    <dd><%= faq.answer %></dd>
+    </dl>
+<% end %>
+</div>

@@ -1,15 +1,9 @@
 <div id="footer">
-	<div id="footer-map">
-		<%= image_tag "map.jpg" %>
-	</div>
-	<div class="left">
-		<p class="bold">โทร</p>
-		<p>098766878</p>
-
-		<br>
-
-		<p class="bold">ที่อยู่</p>
-		<p>123/456 หมู่ 55 บลา บลา บลา</p>
-		
-	</div>
+	<div id="other-link">
+	<%= link_to "คำถามที่พบบ่อย", faqs_path %>  
+	<%= link_to "ติดต่อเรา", "" %>  
+	<%= link_to "แผนที่", "" %>  
+	<%= link_to "เกี่ยวกับเรา", "", class: "border-none" %> </div>
+	<br>
+	<div>&copy; <%= Time.now.year %> by KhonKaen Furniture</div>
 </div>

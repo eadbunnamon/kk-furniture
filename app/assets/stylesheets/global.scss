@@ -96,13 +96,8 @@ html, body {
 
     li.dropdown {
       margin-bottom: 0px;
-      font-size: 14px;
-
-      ul.dropdown-menu {
-        li {
-          padding-left: 5px;
-        }
-      }
+      font-size: 12px;
+      font-weight: bold;
     }
   }
 
@@ -238,4 +233,27 @@ div.div-items-img {
 
 a:hover {
   text-decoration: none !important;
+}
+
+#head-menu {
+  a {
+    color: black;
+    .caret {
+      color: black;
+    }
+  }
+}
+
+#other-link {
+  margin-left: -15px;
+}
+
+#other-link a {
+  padding: 0 15px;
+  border-right: 1px solid #B4B4E4;
+  color: black;
+}
+
+a.border-none {
+  border: 0 !important;
 }

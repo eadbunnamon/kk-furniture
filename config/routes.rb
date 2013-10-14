@@ -19,4 +19,7 @@ FurnitureStore::Application.routes.draw do
   resources :homes, only: :index
   resources :categories, only: [:index, :show]
   resources :rooms, only: [:index, :show]
+  resources :categories, only: [:show]
+  resources :rooms, only: [:show]
+  resources :faqs, only: [:index]
 end

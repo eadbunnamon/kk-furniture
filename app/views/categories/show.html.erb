@@ -1,11 +1,11 @@
 <div class="border-bottom">
-	<p class="text-title bold left"><%= @room.name %></p>
+	<p class="text-title bold left"><%= @category.name %></p>
 </div>
 <br>
 <br>
 
 <ul class="thumbnails">
-	<% (@room.products || []).each do |product| %>
+	<% (@category.products || []).each do |product| %>
     <li class="span4">
     	<a href="" class="thumbnail">
     		<p class="corner-left"><%= number_to_currency(product.price, unit: "฿", precision: 0) %></p>
