@@ -15,4 +15,8 @@ FurnitureStore::Application.routes.draw do
   		get :all_furniture
   	end
   end
+
+  resources :homes, only: :index
+  resources :categories, only: [:index, :show]
+  resources :rooms, only: [:index, :show]
 end

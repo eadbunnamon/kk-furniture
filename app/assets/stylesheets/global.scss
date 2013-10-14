@@ -9,7 +9,6 @@ html, body {
 }
 
 .head-bg {
-  height: 15%;
   border-bottom: 1px solid #E4E4E4;  
   background-color: #F5F5F5;
 
@@ -88,15 +87,22 @@ html, body {
 }
 
 #head-menu {
-  overflow: hidden;
 
-  ul {
+  ul.nav {
     list-style: none;
     padding-left: 0;
-    margin: 10px 0;
+    margin: 0;
+    border: 0;
 
-    li {
-      padding-right: 20px;
+    li.dropdown {
+      margin-bottom: 0px;
+      font-size: 14px;
+
+      ul.dropdown-menu {
+        li {
+          padding-left: 5px;
+        }
+      }
     }
   }
 

@@ -1,12 +1,26 @@
 <div id="head-menu" class='clearfix'>
-  <ul class='left'>
-    <li class='nav'>เฟอนิเจอร์ทั้งหมด</li>
-    <li class='nav'>ห้อง</li>
-    <li class='nav'>โปรโมชั่น</li>
-    <li class='nav'>สถานที่ตั้ง</li>
-    <li class='nav'>ถาม-ตอบ</li>
-  </ul>
-  <ul class='right'>
-    <li class='nav'>ติดต่อเรา</li>
+  <ul class="nav nav-tabs">
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        All furniure
+        <b class='caret'></b>
+      </a>
+      <ul class="dropdown-menu">
+        <% @categories.each do |category| %>
+          <li><%= link_to category.name, category_path(category) %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        Room
+        <b class='caret'></b>
+      </a>
+      <ul class="dropdown-menu">
+        <% @rooms.each do |room| %>
+          <li><%= link_to room.name, room_path(room) %></li>
+        <% end %>
+      </ul>
+    </li>
   </ul>
 </div>

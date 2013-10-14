@@ -60,7 +60,7 @@
 	    <li class="span4">
 	    	<a href="" class="thumbnail">
 	    		<p class="corner-left"><%= number_to_currency(best.price, unit: "฿", precision: 0) %></p>
-	    		<%= image_tag best.photos.first.photo.thumb.url %>
+	    		<%= image_tag best.photos.first.photo.thumb.url if best.photos.first.present? %>
 	    		<p class="text-center product-name"><%= best.name %></p>
 	    	</a>
 	    </li>
