@@ -1,0 +1,28 @@
+<div id="main_content">
+  <h4>Rooms</h4>
+  <%= semantic_form_for [:admin, @room], validate: true, :html => { :enctype => "multipart/form-data" } do |f| %>
+    <fieldset class="inputs">
+      <ol>
+        <li id="room_name_input" class="string input required stringish">
+          <label>ชื่อห้อง <abbr title="required">*</abbr></label>
+          <%= f.text_field :name, required: true %>
+        </li>
+        <li id="room_description_input" class="string input stringish">
+          <label>คำอธิบาย</label>
+          <%= f.text_field :description %>
+        </li>
+        <li id="room_photo_input" class="string inputs stringish">
+          <label>ภาพตัวอย่าง</label>
+          <%= f.file_field "photo", required: "true" %>
+        </li>
+      </ol>
+    </fieldset>
+    <div>
+      <fieldset class="actions">
+        <ol>
+            <li><%= f.submit "Save" %></li>            
+        </ol>
+      </fieldset>
+    </div>
+  <% end %>
+</div>

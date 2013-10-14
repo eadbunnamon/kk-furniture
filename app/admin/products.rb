@@ -42,7 +42,7 @@ ActiveAdmin.register Product do
     end
 
     def update
-      params[:rooms] = params[:rooms].compact
+      params[:rooms] = (params[:rooms].compact rescue nil)
       params[:product][:price] = params[:product][:price].to_s.gsub(/,/, '').to_f
 
       @product = Product.find(params[:id])

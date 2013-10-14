@@ -1,0 +1,19 @@
+#room {
+  .top_panel {
+    .room_photo {
+      width: 100%;
+      min-height: 200px;
+      border-radius: 5px;
+      border: 1px solid #E4E4E4;
+    }
+  }
+
+  .products {
+    .product_231x231_photo {
+      width: 231px;
+      height: 231px;
+      background-repeat: no-repeat;
+      background-position:center; 
+    }
+  }
+}

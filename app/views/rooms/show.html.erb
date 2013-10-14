@@ -1,0 +1,12 @@
+<div id='room'>
+    <div class='top_panel'>
+      <div class='room_photo' style='background-image: url(<%= @room.photo.url %>);'></div>
+    </div>
+    <div class='products row-fluid'>
+      <% @room.products.each do |product| %>
+        <div class='each_product span3'>
+          <div class='product_231x231_photo' style='background-image: url(<%= product.photos.first.photo.url %>);'></div>
+        </div>
+      <% end %>
+    </div>
+</div>
