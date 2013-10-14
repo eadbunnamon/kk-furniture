@@ -6,8 +6,9 @@
     </ol>
     <!-- Carousel items -->
     <div class="carousel-inner">
-	    <div class="active item"><%= image_tag "cover1.jpg", class: "img-slider" %></div>
-	    <div class="item"><%= image_tag "DSC_0003.JPG", class: "img-slider" %></div>
+	    <div class="active item"><%= image_tag "slide1.jpg", class: "img-slider" %></div>
+      <div class="item"><%= image_tag "slide2.jpg", class: "img-slider" %></div>
+	    <div class="item"><%= image_tag "slide3.jpg", class: "img-slider" %></div>
     </div>
     <!-- Carousel nav -->
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -16,45 +17,44 @@
 
 <!-- Promotion -->
 <div id="promotions" class="border-bottom">
-	<p class="text-title bold">โปรโมชั่น</p>
+	<!-- <p class="text-title bold left">โปรโมชั่น</p> -->
 	<!-- <hr>	 -->
 </div>
 
-<div class="products">
+<div class="products clearfix">
 	<ul class="thumbnails">
 	    <li class="span4">
 		    <div class="thumbnail">
 		    <%= image_tag "test-01.jpg" %>
-		    <h3>Thumbnail label</h3>
-		    <p>Thumbnail caption...</p>
+		    <h5 class="text-center">สินค้ามาใหม่</h5>
+		    <p class="text-center">หลากหลายรายการ รอให้คุณเลือกซื้อเลือกชม</p>
 		    </div>
 	    </li>
 	    <li class="span4">
 		    <div class="thumbnail">
 		    <%= image_tag "test-02.jpg" %>
-		    <h3>Thumbnail label</h3>
-		    <p>Thumbnail caption...</p>
+		    <h5 class="text-center">โปรโมชั่น</h5>
+		    <p class="text-center">พบกับสินค้ามากมายลดราคาประจำเดือนนี้</p>
 		    </div>
 	    </li>
 	    <li class="span4">
 		    <div class="thumbnail">
 		    <%= image_tag "test-03.jpg" %>
-		    <h3>Thumbnail label</h3>
-		    <p>Thumbnail caption...</p>
+		    <h5 class="text-center">สินค้าขายดี</h5>
+		    <p class="text-center">สินค้ายอดนิยมที่ผู้คนเลือกซื้อ</p>
 		    </div>
 	    </li>
     </ul>
-    <div class="right"><%= link_to "ดูข้อมูลเพิ่มเติม...", "#" %></div>
 </div>
 <!-- Promotion -->
 
 <!-- Best Sellers -->
 <div id="best-sellers"  class="border-bottom">
-	<p class="text-title bold">สินค้าขายดี</p>
+	<p class="text-title bold left">ยอดชมมากที่สุด</p>
 	<!-- <hr class="separate-title">	 -->
 </div>
 
-<div class="products">
+<div class="products clearfix">
 	<ul class="thumbnails">
 		<% (@best_sellers || []).each do |best| %>
 	    <li class="span4">
