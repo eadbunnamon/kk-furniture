@@ -17,6 +17,10 @@ html, body {
     max-width: 960px;
     width: 100%;    
     margin: 0 auto;
+
+    .other-link {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -52,6 +56,7 @@ html, body {
 #header {
   overflow: hidden;
   height: 70px;
+  padding-top: 20px;
 
   ul {
     list-style: none;
@@ -64,6 +69,22 @@ html, body {
 
     li.head-search {
       position: relative;
+    }
+  }
+
+  .logo, .global_search {
+    width: 30%;
+    display: inline-block;
+  }
+
+  .global_search {
+    text-align: center;
+
+    .btn {
+      font-size: 12px;
+    }
+    .search-query {
+      height: 21px;
     }
   }
 }
@@ -118,7 +139,7 @@ html, body {
 .footer-container {
   min-height: 14%;
   overflow: hidden;
-  border-top: 4px solid #0088CC;
+  border-top: 1px solid #0088CC;
   background-color: #F5F5F5;
 }
 
@@ -244,11 +265,11 @@ a:hover {
   }
 }
 
-#other-link {
+.other-link {
   margin-left: -15px;
 }
 
-#other-link a {
+.other-link a {
   padding: 0 15px;
   border-right: 1px solid #B4B4E4;
   color: black;

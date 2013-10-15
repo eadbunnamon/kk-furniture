@@ -1,5 +1,14 @@
 <div id='header'>
-  <ul class='clearfix'>
-    <li class='logo'><%#= image_tag "rails.png" %></li>
-  </ul>
+  <div class='logo clearfix'>
+    <%= image_tag "logo.png" %>
+  </div>
+  <div class='global_search'>
+    <label>ติดต่อ: 08x-xxx-xxxx</label>
+    <%= form_tag search_products_path, class: "form-search" do %>
+      <div class="input-append">
+        <%= text_field_tag "search", nil, placeholder: "ระบุคำค้นที่ต้องการ...", class: "span2 search-query" %>
+        <%= submit_tag "ค้นหา", class: "btn" %>
+      </div>
+    <% end %>
+  </div>
 </div>

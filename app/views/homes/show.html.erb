@@ -1,1 +1,18 @@
 <%= image_tag @product.photos.first.photo.url if @product.photos.first.present? %>
+
+
+<div id="galleria">
+    <%= image_tag "logo.png" %>
+    <%= image_tag "test-01.jpg" %>
+    <%= image_tag "test-02.jpg" %>
+    <%= image_tag "test-03.jpg" %>
+</div>
+
+<script>
+    Galleria.loadTheme('/assets/galleria.classic.js');
+    Galleria.run('#galleria');
+</script>
+
+<style>
+    #galleria{ width: 700px; height: 400px; background: #000 }
+</style>

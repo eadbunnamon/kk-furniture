@@ -1,27 +1,36 @@
-<div id="head-menu" class='clearfix'>
-  <ul class="nav nav-tabs">
-    <li><%= link_to "หน้าหลัก", homes_path, class: "bold" %></li>
-    <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        เฟอนิเจอร์
-        <b class='caret'></b>
-      </a>
-      <ul class="dropdown-menu">
-        <% @categories.each do |category| %>
-          <li><%= link_to category.name, category_path(category) %></li>
-        <% end %>
-      </ul>
-    </li>
-    <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        ห้อง
-        <b class='caret'></b>
-      </a>
-      <ul class="dropdown-menu">
-        <% @rooms.each do |room| %>
-          <li><%= link_to room.name, room_path(room) %></li>
-        <% end %>
-      </ul>
-    </li>
-  </ul>
+<div class='clearfix'>
+  <div id="head-menu" class='clearfix left'>
+    <ul class="nav nav-tabs">
+      <li><%= link_to "หน้าหลัก", homes_path, class: "bold" %></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          เฟอนิเจอร์
+          <b class='caret'></b>
+        </a>
+        <ul class="dropdown-menu">
+          <% @categories.each do |category| %>
+            <li><%= link_to category.name, category_path(category) %></li>
+          <% end %>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          ห้อง
+          <b class='caret'></b>
+        </a>
+        <ul class="dropdown-menu">
+          <% @rooms.each do |room| %>
+            <li><%= link_to room.name, room_path(room) %></li>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class='other-link right'>
+    <%= link_to "คำถามที่พบบ่อย", faqs_path %>  
+    <%= link_to "ติดต่อเรา", "" %>  
+    <%= link_to "แผนที่", "" %>  
+    <%= link_to "เกี่ยวกับเรา", "", class: "border-none" %>
+  </div>
 </div>
