@@ -17,6 +17,6 @@ class HomesController < ApplicationController
   end
 
   def promotions
-    
+    @promotions = Promotion.all
   end
 end

@@ -296,3 +296,11 @@ a.thumbnail {
 ul.main-thum li a.thumbnail:hover {
   border-color: #DDDDDD !important;
 }
+
+.promotion_item {
+  display: inline-block;
+  
+  .promotion_label {
+    text-align: center;
+  }
+}

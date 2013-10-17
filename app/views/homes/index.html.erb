@@ -33,11 +33,11 @@
 		    </a>
 	    </li>
 	    <li class="span4">
-		    <a href="#" class="thumbnail">
+		    <%= link_to promotions_homes_path, class: "thumbnail" do %>
 		    <%= image_tag "test-02.jpg" %>
 		    <h5 class="text-center">โปรโมชั่น</h5>
 		    <p class="text-center">พบกับสินค้ามากมายลดราคาประจำเดือนนี้</p>
-		    </a>
+		    <% end %>
 	    </li>
 	    <li class="span4">
 		    <a href="<%= best_sellers_homes_path %>" class="thumbnail">

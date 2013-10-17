@@ -1,0 +1,10 @@
+<div id='promotions'>
+  <% @promotions.each do |promotion| %>
+  <div class='promotion_item span3'>
+    <%= link_to promotion.file.url, target: "_blank" do %>
+      <div><%= image_tag promotion.file.thumb.url %></div> 
+      <div class='promotion_label'><%= promotion.name %></div> 
+    <% end %>
+  </div>
+  <% end %>
+</div>

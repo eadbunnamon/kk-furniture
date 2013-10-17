@@ -1,0 +1,34 @@
+<div id="main_content">
+  <h4>Promotions</h4>
+  <%= semantic_form_for [:admin, @promotion], validate: true, :html => { :enctype => "multipart/form-data" } do |f| %>
+  <fieldset class="inputs">
+    <ol>
+      <li id="promotion_name_input" class="string input required stringish">
+        <label>Name <abbr title="required">*</abbr></label>
+        <%= f.text_field :name, required: true %>
+      </li>
+      <li id="promotion_name_input" class="string input required stringish">
+        <label>File <abbr title="required">*</abbr></label>
+        <%= f.file_field :file, required: true %>
+      </li>
+      <li id="promotion_starts_at_input" class="string input required stringish">
+        <label>Starts at <abbr title="required">*</abbr></label>
+        <%= f.text_field :name, required: true %>
+      </li>
+      <li id="promotion_ends_at_input" class="string input required stringish">
+        <label>Ends at <abbr title="required">*</abbr></label>
+        <%= f.text_field :name, required: true %>
+      </li>
+    </ol>     
+  </fieldset>
+
+  <div>
+    <fieldset class="actions">
+      <ol>
+          <li><%= f.submit "Save" %></li>            
+      </ol>
+    </fieldset>
+  </div>
+      
+  <% end %>
+</div>
