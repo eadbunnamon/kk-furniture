@@ -1,0 +1,62 @@
+
+<div id="show-products-photo">
+<div class="border-bottom">
+  <h5><%= @product.name %></h5>
+</div>
+<br>
+<ul class="pager">
+	<li class="previous">
+	<% if @category_id.present? %>
+		<%= link_to "Previous", product_path(@prev_id, categoryid: @category_id)  %>
+	<% elsif @room_id.present? %>
+		<%= link_to "Previous", product_path(@prev_id, roomid: @room_id) %>
+	<% elsif @best_sellers.present? %>
+		<%= link_to "Previous", product_path(@prev_id, best_sellers: true) %>
+	<% elsif @newest_products.present? %>
+		<%= link_to "Previous", product_path(@prev_id, newest_products: true) %>
+	<% else %>
+		<%= link_to "Previous", product_path(@prev_id) %>
+	<% end %>
+	</li>
+	<li class="next">
+	<% if @category_id.present? %>
+		<%= link_to "Next", product_path(@next_id, categoryid: @category_id)  %>
+	<% elsif @room_id.present? %>
+		<%= link_to "Next", product_path(@next_id, roomid: @room_id) %>
+	<% elsif @best_sellers.present? %>
+		<%= link_to "Next", product_path(@next_id, best_sellers: true) %>
+	<% elsif @newest_products.present? %>
+		<%= link_to "Next", product_path(@next_id, newest_products: true) %>
+	<% else %>
+		<%= link_to "Next", product_path(@next_id) %>
+	<% end %>
+	</li>
+
+	<div id="galleria">
+	    <% (@product.photos || []).each do |p| %>
+			<%= image_tag p.photo.url %>
+		<% end %>
+	</div>
+</ul>
+<br>
+<br>
+</div>
+
+<div class="suggestion well">
+	<p class="bold">รายละเอียด</p>
+
+</div>
+
+<script>
+    Galleria.loadTheme('/assets/galleria.classic.js');
+    Galleria.run('#galleria');
+</script>
+
+<style>
+    #galleria { 
+    	width: 750px; 
+    	height: 450px; 
+    	background: #FFF;
+    	clear: both;
+    }
+</style>

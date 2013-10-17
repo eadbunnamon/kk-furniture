@@ -4,4 +4,14 @@
 <br>
 <br>
 
-<%= render partial: "/shared/show_products", locals: { products: @best_sellers } %>
+<ul class="thumbnails">
+  <% (@best_sellers || []).each do |product| %>
+    <li class="span4">
+      <a href="<%= product_path(product, best_sellers: true) %>" class="thumbnail">
+        <p class="corner-left"><%= number_to_currency(product.price, unit: "฿", precision: 0) %></p>
+        <%= image_tag product.photos.first.photo.thumb.url if product.photos.first.present? %>
+        <p class="text-center product-name"><%= product.name %></p>
+      </a>    
+    </li>
+    <% end %>
+</ul>

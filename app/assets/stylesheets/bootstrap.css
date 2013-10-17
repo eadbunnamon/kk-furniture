@@ -5119,9 +5119,10 @@ input[type="submit"].btn.btn-mini {
 }
 
 .pager {
-  margin: 20px 0;
+  margin: 20px 0 0 0;
   text-align: center;
   list-style: none;
+  width: 730px;
   *zoom: 1;
 }
 

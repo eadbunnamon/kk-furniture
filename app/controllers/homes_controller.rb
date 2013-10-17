@@ -4,10 +4,6 @@ class HomesController < ApplicationController
     @new_arrivals = Product.order("created_at desc").limit(2)
   end
 
-  def show
-    @product = Product.find(params[:id])
-  end
-
   def newest_products
     @newest_products = Product.where("created_at > ?", Time.now - 30.days)
   end
