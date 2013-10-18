@@ -318,3 +318,10 @@ ul.main-thum li a.thumbnail:hover {
     text-align: center;
   }
 }
+
+.active {
+  a {
+    border-color: #EEE #EEE #DDD !important;
+    background-color: #EEE !important;
+  }
+}
