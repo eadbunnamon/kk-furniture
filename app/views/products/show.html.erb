@@ -15,6 +15,8 @@
 			<%= link_to "ย้อนหลับ", product_path(@prev_id, best_sellers: true) %>
 		<% elsif @newest_products.present? %>
 			<%= link_to "ย้อนหลับ", product_path(@prev_id, newest_products: true) %>
+		<% elsif @favorite.present? %>
+			<%= link_to "ย้อนหลับ", product_path(@prev_id, favorite: true) %>
 		<% else %>
 			<%= link_to "ย้อนหลับ", product_path(@prev_id) %>
 		<% end %>
@@ -33,6 +35,8 @@
 			<%= link_to "ถัดไป", product_path(@next_id, best_sellers: true) %>
 		<% elsif @newest_products.present? %>
 			<%= link_to "ถัดไป", product_path(@next_id, newest_products: true) %>
+		<% elsif @favorite.present? %>
+			<%= link_to "ถัดไป", product_path(@next_id, favorite: true) %>
 		<% else %>
 			<%= link_to "ถัดไป", product_path(@next_id) %>
 		<% end %>
@@ -51,9 +55,32 @@
 <br>
 </div>
 
-<div class="suggestion well">
+<% if @product.detail.present? %>
+<div class="suggestion">
 	<p class="bold">รายละเอียด</p>
+</div>
 
+<div class="well p-details">
+	<p><%= @product.detail %></p>
+</div>
+<% end %>
+
+<% if @product.description.present? %>
+<div class="suggestion">
+	<p class="bold">เพิ่มเติม</p>
+</div>
+
+<div class="well p-details">
+	<p><%= @product.description %></p>
+</div>
+<% end %>
+
+<div class="suggestion">
+	<p class="bold">ราคา</p>
+</div>
+
+<div class="well p-details">
+	<p><%= number_to_currency(@product.price, unit: "฿", precision: 0) %></p>
 </div>
 
 <script>
