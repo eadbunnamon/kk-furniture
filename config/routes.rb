@@ -21,6 +21,7 @@ FurnitureStore::Application.routes.draw do
       get :newest_products
       get :best_sellers
       get :promotions
+      get :favorite
     end
   end
 

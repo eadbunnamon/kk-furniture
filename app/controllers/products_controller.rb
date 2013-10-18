@@ -2,6 +2,8 @@ class ProductsController < ApplicationController
 
   def show
   	@product = Product.find(params[:id])
+    @product.view = @product.view + 1
+    @product.save
 
     if params[:categoryid].present?
       @product_ids = Product.where(category_id: params[:categoryid]).map(&:id) 

@@ -58,12 +58,12 @@
 
 <div class="products clearfix">
 	<ul class="thumbnails">
-		<% (@best_sellers || []).each do |best| %>
+		<% (@favorites || []).each do |fov| %>
 	    <li class="span4">
-	    	<a href="" class="thumbnail">
-	    		<p class="corner-left"><%= number_to_currency(best.price, unit: "฿", precision: 0) %></p>
-	    		<%= image_tag best.photos.first.photo.thumb.url if best.photos.first.present? %>
-	    		<p class="text-center product-name"><%= best.name %></p>
+	    	<a href="<%= product_path(fov) %>" class="thumbnail">
+	    		<p class="corner-left"><%= number_to_currency(fov.price, unit: "฿", precision: 0) %></p>
+	    		<%= image_tag fov.photos.first.photo.thumb.url if fov.photos.first.present? %>
+	    		<p class="text-center product-name"><%= fov.name %> (viewed: <%= fov.view %>)</p>
 	    	</a>
 	    </li>
 	    <% end %>

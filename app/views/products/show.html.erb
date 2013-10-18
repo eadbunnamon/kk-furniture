@@ -6,29 +6,38 @@
 <br>
 <ul class="pager">
 	<li class="previous">
-	<% if @category_id.present? %>
-		<%= link_to "Previous", product_path(@prev_id, categoryid: @category_id)  %>
-	<% elsif @room_id.present? %>
-		<%= link_to "Previous", product_path(@prev_id, roomid: @room_id) %>
-	<% elsif @best_sellers.present? %>
-		<%= link_to "Previous", product_path(@prev_id, best_sellers: true) %>
-	<% elsif @newest_products.present? %>
-		<%= link_to "Previous", product_path(@prev_id, newest_products: true) %>
+	<% if @product_ids.first != @product.id %>
+		<% if @category_id.present? %>
+			<%= link_to "ย้อนหลับ", product_path(@prev_id, categoryid: @category_id)  %>
+		<% elsif @room_id.present? %>
+			<%= link_to "ย้อนหลับ", product_path(@prev_id, roomid: @room_id) %>
+		<% elsif @best_sellers.present? %>
+			<%= link_to "ย้อนหลับ", product_path(@prev_id, best_sellers: true) %>
+		<% elsif @newest_products.present? %>
+			<%= link_to "ย้อนหลับ", product_path(@prev_id, newest_products: true) %>
+		<% else %>
+			<%= link_to "ย้อนหลับ", product_path(@prev_id) %>
+		<% end %>
 	<% else %>
-		<%= link_to "Previous", product_path(@prev_id) %>
+		<span>ย้อนหลับ</span>
 	<% end %>
 	</li>
+
 	<li class="next">
-	<% if @category_id.present? %>
-		<%= link_to "Next", product_path(@next_id, categoryid: @category_id)  %>
-	<% elsif @room_id.present? %>
-		<%= link_to "Next", product_path(@next_id, roomid: @room_id) %>
-	<% elsif @best_sellers.present? %>
-		<%= link_to "Next", product_path(@next_id, best_sellers: true) %>
-	<% elsif @newest_products.present? %>
-		<%= link_to "Next", product_path(@next_id, newest_products: true) %>
+	<% if @product_ids.last != @product.id %>
+		<% if @category_id.present? %>
+			<%= link_to "ถัดไป", product_path(@next_id, categoryid: @category_id)  %>
+		<% elsif @room_id.present? %>
+			<%= link_to "ถัดไป", product_path(@next_id, roomid: @room_id) %>
+		<% elsif @best_sellers.present? %>
+			<%= link_to "ถัดไป", product_path(@next_id, best_sellers: true) %>
+		<% elsif @newest_products.present? %>
+			<%= link_to "ถัดไป", product_path(@next_id, newest_products: true) %>
+		<% else %>
+			<%= link_to "ถัดไป", product_path(@next_id) %>
+		<% end %>
 	<% else %>
-		<%= link_to "Next", product_path(@next_id) %>
+		<span>ถัดไป</span>
 	<% end %>
 	</li>
 

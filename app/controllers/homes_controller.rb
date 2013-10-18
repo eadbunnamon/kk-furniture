@@ -1,7 +1,8 @@
 class HomesController < ApplicationController
   def index
-    @best_sellers = Product.where(best_seller: true).limit(2)
-    @new_arrivals = Product.order("created_at desc").limit(2)
+    @best_sellers = Product.where(best_seller: true)
+    @new_arrivals = Product.order("created_at desc")
+    @favorites = Product.order("view desc").limit(6)
   end
 
   def newest_products
