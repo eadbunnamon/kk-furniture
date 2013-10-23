@@ -85,7 +85,13 @@ ActiveAdmin.register Product do
     photo.product = product
     photo.save
 
-    redirect_to admin_product_path(product, anchor: 'photo_panel')
+    if params[:past_action] == "edit"
+      path_direction = edit_admin_product_path(product, anchor: 'photo_panel')
+    else
+      path_direction = admin_product_path(product, anchor: 'photo_panel')
+    end
+
+    redirect_to path_direction
   end
 
   member_action :delete_photo, :method => :delete do
@@ -93,6 +99,12 @@ ActiveAdmin.register Product do
     product = photo.product
     photo.destroy
 
-    redirect_to admin_product_path(product, anchor: 'photo_panel')
+    if params[:past_action] == "edit"
+      path_direction = edit_admin_product_path(product, anchor: 'photo_panel')
+    else
+      path_direction = admin_product_path(product, anchor: 'photo_panel')
+    end
+
+    redirect_to path_direction
   end
 end
