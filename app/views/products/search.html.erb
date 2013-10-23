@@ -1,0 +1,21 @@
+<div id="products_result">
+
+  <div class="border-bottom">
+    <h5>ผลจากการค้นหา: <%= @original_keywords %></h5>
+  </div>
+  <br>
+  <br>
+
+  <ul class="thumbnails">
+    <% @products.each do |product| %>
+      <li class="span4">
+        <a href="<%= product_path(product, roomid: @room) %>" class="thumbnail">
+          <p class="corner-left"><%= number_to_currency(product.price, unit: "฿", precision: 0) %></p>
+          <%= image_tag product.photos.first.photo.thumb.url if product.photos.first.present? %>
+          <p class="text-center product-name"><%= product.name %></p>
+        </a>    
+      </li>
+      <% end %>
+  </ul>
+
+</div>
