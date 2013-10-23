@@ -61,17 +61,7 @@
 </div>
 
 <div class="well p-details">
-	<p><%= @product.detail %></p>
-</div>
-<% end %>
-
-<% if @product.description.present? %>
-<div class="suggestion">
-	<p class="bold">เพิ่มเติม</p>
-</div>
-
-<div class="well p-details">
-	<p><%= @product.description %></p>
+	<p><%= @product.detail.gsub(/\n/, '<br>').html_safe %></p>
 </div>
 <% end %>
 
@@ -81,6 +71,18 @@
 
 <div class="well p-details">
 	<p><%= number_to_currency(@product.price, unit: "฿", precision: 0) %></p>
+</div>
+
+<div class="product-details">
+	<% if @product.description.present? %>
+	<div>
+		<p class="bold">เพิ่มเติม</p>
+	</div>
+
+	<div>
+		<p><%= @product.description.gsub(/\n/, '<br>').html_safe %></p>
+	</div>
+	<% end %>
 </div>
 
 <script>
