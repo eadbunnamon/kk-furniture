@@ -10,7 +10,8 @@
   </div>
   <div id='photos'>
     <% @product.photos.each do |photo| %>
-      <div class='thumb-image' style='background-image:url(<%= photo.photo.thumb.url %>);'>
+      <div class='thumb-image'>
+      <%= image_tag photo.photo.thumb.url %>
       <%= link_to ' ', delete_photo_admin_product_path(photo_id: photo.id, past_action: action_name), method: "DELETE", class: "delete icon-white icon-remove", confirm: "ต้องการลบภาพนี้ ?" %>
       </div>
     <% end %>
