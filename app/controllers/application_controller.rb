@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_menu
 
   def load_menu
-    @categories = Category.all
-    @rooms = Room.all
+    @menu_categories = Category.all
+    @menu_rooms = Room.all
   end
 end
