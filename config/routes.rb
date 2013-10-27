@@ -13,6 +13,7 @@ FurnitureStore::Application.routes.draw do
   resources :homes, only: :index do
   	collection do
   		get :all_furniture
+      get :map
   	end
   end
 
