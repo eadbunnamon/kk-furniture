@@ -13,6 +13,7 @@ test:
 
 production: &production
   <<: *default
+  adapter: postgresql
   database: furniture_store_production
   username: <%= File.read(Rails.root.join(*%w(.. .. shared user))) rescue "" %>
   password: <%= File.read(Rails.root.join(*%w(.. .. shared password))) rescue "" %>

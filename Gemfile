@@ -26,6 +26,9 @@ gem 'will_paginate'
 gem 'carrierwave'
 gem "rmagick", "~> 2.13.2"
 
+gem 'capistrano'
+gem 'rvm-capistrano'
+
 group :development, :test do
   # gem 'capybara'
   gem "mysql2"
@@ -40,7 +43,7 @@ group :development, :test do
 end
 
 group :production do
-  # gem 'pg', '0.12.2'
+  gem 'pg'
 end
 
 group :ubuntu do
