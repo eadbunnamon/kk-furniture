@@ -13,8 +13,7 @@ test:
 
 production: &production
   <<: *default
-  username: app
+  username: root
   password: "Splash446"
-  adapter: postgresql
   database: furniture_store_production
 
