@@ -8,6 +8,7 @@ ActiveAdmin.register Product do
   end
 
   index do                            
+    column :code
     column :name
     column :price do |product|
       div :class => "price" do
@@ -59,6 +60,7 @@ ActiveAdmin.register Product do
 
   show do |product|
     attributes_table do
+      row :code
       row :name
       row :price do |product|
         div :class => "price" do
