@@ -7,6 +7,7 @@ set :rvm_ruby_string, "1.9.3-p429@myapp"
 set :use_sudo, false
 set :deploy_via, :remote_cache
 set :bundle_without, [:development, :test]
+set :shared_children, shared_children + %w{public/uploads}
 
 set :user, "app"
 role :web, "162.243.64.236"
