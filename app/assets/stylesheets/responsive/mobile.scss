@@ -18,6 +18,8 @@ px      68    160    252    */
 
   #main-container {
     padding: 0;
+    width: 90%;
+    margin: 0 auto;
   }
 
   #footer {
@@ -26,5 +28,24 @@ px      68    160    252    */
 
   #wrap {
     padding: 0;
+  }
+
+  div.suggestion {
+    float: left;
+    clear: both;
+  }
+
+  .p-details {
+    clear: both;
+    float: left;
+  }
+
+  .galleria-image img {
+    width: 340px !important;
+    left: 0 !important;
+  }
+
+  #map img {
+    width: 100%;
   }
 }
