@@ -6,8 +6,8 @@
     </ol>
     <!-- Carousel items -->
     <div class="carousel-inner">
-	    <div class="active item"><%= image_tag "slide1.jpg", class: "img-slider" %></div>
-      <div class="item"><%= image_tag "slide2.jpg", class: "img-slider" %></div>
+      <div class="active item"><%= image_tag "slide1.jpg", class: "img-slider" %></div>
+      <div class="item"><%= image_tag "logo_2.jpg", class: "img-slider" %></div>
 	    <!-- <div class="item"><%#= image_tag "slide3.jpg", class: "img-slider" %></div> -->
     </div>
     <!-- Carousel nav -->
@@ -67,7 +67,10 @@
 	    	<a href="<%= product_path(fov, favorite: true) %>" class="thumbnail">
 	    		<p class="corner-left"><%= number_to_currency(fov.price, unit: "฿", precision: 0) %></p>
 	    		<%= image_tag fov.photos.first.photo.thumb.url if fov.photos.first.present? %>
-	    		<p class="text-center product-name"><%= fov.name %>&nbsp;(ยอดชม:&nbsp;<%= fov.view %>)</p>
+	    		<p class="text-center product-name">
+            <%= fov.name %>
+            <span class='hidden'>&nbsp;(ยอดชม:&nbsp;<%= fov.view %>)</span>
+          </p>
           <!-- <p class="text-center">ยอดชม:&nbsp;<%#= fov.view %></p> -->
 	    	</a>
 	    </li>
