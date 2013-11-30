@@ -5,7 +5,7 @@ class HomesController < ApplicationController
     @favorites = Product.order("view desc").limit(6)
 
     @new_arrival_photo = @new_arrivals.last.photos.first.photo.thumb.url if @new_arrivals.present? && @new_arrivals.last.photos.present?
-    @best_seller_photo = @best_sellers.last.photos.first.photo.thumb.url if @best_seller_photo.present? && @best_seller_photo.last.photos.present?
+    @best_seller_photo = @best_sellers.last.photos.first.photo.thumb.url if @best_sellers.present? && @best_sellers.last.photos.present?
     @promotion_photo = Promotion.last.file.thumb.url if @promotion_photo.present?
   end
 
