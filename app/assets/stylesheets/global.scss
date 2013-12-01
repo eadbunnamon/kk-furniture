@@ -77,12 +77,20 @@ h5 {
   }
 
   .logo, .global_search {
-    width: 30%;
     display: inline-block;
+    margin-bottom: 16px;
+
+
+    img {
+      border: 4px solid #FFFFFF;
+      border-radius: 14px;
+      height: 90px;
+    }
   }
 
   .global_search {
     text-align: center;
+    width: 50%;
 
     .btn {
       font-size: 12px;
