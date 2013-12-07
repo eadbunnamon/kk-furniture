@@ -6,6 +6,7 @@ html, body {
   font-size: 12px;
   margin: 0;
   padding: 0;
+  font-size: 13px;
 }
 
 h5 {
@@ -244,7 +245,8 @@ div.div-items-img {
   white-space: normal;
   padding-top: 3px;
   margin-bottom: 0;
-  color: black;
+  color: #222222;
+  font-weight: bold;
 }
 
 .span4 a {
@@ -305,6 +307,7 @@ div.image_group {
 
 a.thumbnail {
   color: #333333;
+  min-height: 160px;
 }
 
 ul.main-thum li a.thumbnail:hover {

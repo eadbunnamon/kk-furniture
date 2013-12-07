@@ -12,8 +12,8 @@
         <a href="<%= product_path(product, roomid: @room) %>" class="thumbnail">
           <p class="corner-left"><%= number_to_currency(product.price, unit: "฿", precision: 0) %></p>
           <%= image_tag product.photos.first.photo.thumb.url if product.photos.first.present? %>
-          <p class="text-center product-name"><%= product.name %></p>
-        </a>    
+        </a> 
+        <p class="text-center product-name"><%= product.name %></p>   
       </li>
       <% end %>
   </ul>
