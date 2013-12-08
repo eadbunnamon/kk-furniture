@@ -37,4 +37,5 @@ FurnitureStore::Application.routes.draw do
   resources :categories, only: [:show]
   resources :rooms, only: [:show]
   resources :faqs, only: [:index]
+  resources :sitemaps, only: [:index]
 end

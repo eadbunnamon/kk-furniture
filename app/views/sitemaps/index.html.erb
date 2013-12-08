@@ -1,0 +1,25 @@
+<h4>Sitemap</h4>
+<ul>
+  <% (@categories || []).each do |category| %>
+  <li>
+    <%= link_to category.name, category_path(category) %>
+    <ul>
+      <% (category.products.order("created_at DESC").limit(5) || []).each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+      <% end %>
+    </ul>
+  </li>
+  <% end %>
+</ul>
+<h4>Promotions</h4>
+<div id='promotions'>
+  <% (@promotions || []).each do |promotion| %>
+  <div class='promotion_item span3'>
+    <%= link_to promotion.file.url, target: "_blank" do %>
+      <div class='promotion_thumb'><%= image_tag promotion.file.thumb.url %></div> 
+      <div class='promotion_label'><%= promotion.name %></div> 
+    <% end %>
+  </div>
+  <% end %>
+</div>
+<br />
