@@ -97,16 +97,32 @@
     	background: #FFF;
     	clear: both;
     }
-	@media only screen and (max-width: 479px) {
+  /* Mobile portrait */
+	@media only screen and (max-width: 360px) {
     #galleria { 
     	width: 300px; 
     	height: 300px;
     }
 	}
-	@media only screen and (max-width: 767px) {
+  /* Mobile landscape and Phabet portrait*/
+	@media only screen and (min-width: 361px) and (max-width: 640px) {
     #galleria { 
-    	width: 650px; 
+    	width: 500px; 
     	height: 500px;
+    }
+	}
+  /* Phabet landscape */
+	@media only screen and (min-width: 641px) and (max-width: 768px) {
+    #galleria { 
+    	width: 500px; 
+    	height: 500px;
+    }
+	}
+	/* Tablet */
+	@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #galleria { 
+    	width: 700px; 
+    	height: 700px;
     }
 	}
 </style>
