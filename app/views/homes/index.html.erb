@@ -67,11 +67,11 @@
 	    		<p class="corner-left"><%= number_to_currency(fov.price, unit: "฿", precision: 0) %></p>
 	    		<%= image_tag fov.photos.first.photo.thumb.url if fov.photos.first.present? %>
           <!-- <p class="text-center">ยอดชม:&nbsp;<%#= fov.view %></p> -->
-	    	</a>
-        <p class="text-center product-name">
+          <p class="text-center product-name">
             <%= fov.name %>
             <span class='hidden'>&nbsp;(ยอดชม:&nbsp;<%= fov.view %>)</span>
         </p>
+	    	</a>
 	    </li>
 	    <% end %>
     </ul>
