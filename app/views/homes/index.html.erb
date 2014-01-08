@@ -53,27 +53,36 @@
 </div>
 <!-- Promotion -->
 
-<!-- Best Sellers -->
-<div id="best-sellers"  class="border-bottom">
-	<h5>ยอดชมมากที่สุด</h5>
-	<!-- <hr class="separate-title">	 -->
+<div class="products product-items clearfix left">
+  <h5>ยอดชมมากที่สุด</h5>
+  <table>
+  <% (@favorites || []).each_with_index do |fov, index| %>
+
+  <% if index.to_i == 3 %>
+    <tr class="no-bottom-border">
+  <% else %>
+    <tr>
+  <% end %>
+      <td class="photos"><%= image_tag fov.photos.first.photo.thumb.url if fov.photos.first.present? %></td>
+      <td class="pro-details">
+        <p class="bold fov-name"><%= fov.name %></p>
+        <p class='description'><%= truncate(fov.description, :length => 80) %></p>
+        <p><%= link_to "see more", product_path(fov, favorite: true), class: "more" %></p>
+        <span class='hidden'><%= fov.view %></span>
+      </td>
+    </tr>
+  
+  <% end %>
+  </table>
 </div>
 
-<div class="products clearfix">
-	<ul class="thumbnails">
-		<% (@favorites || []).each do |fov| %>
-	    <li class="span4">
-	    	<a href="<%= product_path(fov, favorite: true) %>" class="thumbnail">
-	    		<p class="corner-left"><%= number_to_currency(fov.price, unit: "฿", precision: 0) %></p>
-	    		<%= image_tag fov.photos.first.photo.thumb.url if fov.photos.first.present? %>
-          <!-- <p class="text-center">ยอดชม:&nbsp;<%#= fov.view %></p> -->
-          <p class="text-center product-name">
-            <%= fov.name %>
-            <span class='hidden'>&nbsp;(ยอดชม:&nbsp;<%= fov.view %>)</span>
-        </p>
-	    	</a>
-	    </li>
-	    <% end %>
-    </ul>
+<div class='wellsave-map left'>
+<div class="other-details">
+  <h5>ติดต่อ</h5>
+  <p>โทร: 043-225217-8</p>
+  <p><%= image_tag "map.png" %></p>
 </div>
+<div></div>
+</div>
+<%#= product_path(fov, favorite: true) %>
 <!-- Best Sellers -->

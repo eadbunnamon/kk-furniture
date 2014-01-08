@@ -9,7 +9,7 @@ Global = {
   },
 	init: function(){
     $('.carousel').carousel({
-    	interval: 3000
+    	interval: 2000
     });
 
     // $(".image_group").hover(Global.changePhoto, Global.showFirstPhoto)
