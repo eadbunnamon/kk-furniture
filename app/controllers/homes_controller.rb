@@ -2,7 +2,7 @@ class HomesController < ApplicationController
   def index
     @best_sellers = Product.where(best_seller: true)
     @new_arrivals = Product.order("created_at desc")
-    @favorites = Product.order("view desc").limit(6)
+    @favorites = Product.order("view desc").limit(5)
 
     @new_arrival_photo = @new_arrivals.last.photos.first.photo.thumb.url if @new_arrivals.present? && @new_arrivals.last.photos.present?
     @best_seller_photo = @best_sellers.last.photos.first.photo.thumb.url if @best_sellers.present? && @best_sellers.last.photos.present?
