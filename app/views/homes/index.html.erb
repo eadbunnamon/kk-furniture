@@ -58,7 +58,7 @@
   <table>
   <% (@favorites || []).each_with_index do |fov, index| %>
 
-  <% if index.to_i == 3 %>
+  <% if index.to_i == (@favorites.count - 1) %>
     <tr class="no-bottom-border">
   <% else %>
     <tr>
@@ -81,8 +81,48 @@
   <h5>ติดต่อ</h5>
   <p>โทร: 043-225217-8</p>
   <p><%= image_tag "map.png" %></p>
+  <p>Map</p>
+  <div id="map-canvas"></div>
 </div>
 <div></div>
 </div>
 <%#= product_path(fov, favorite: true) %>
 <!-- Best Sellers -->
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+<script>
+  var map;
+  var wellsave = new google.maps.LatLng(16.404005, 102.815857);
+  function initialize() {
+    var mapOptions = {
+      zoom: 12,
+      center: new google.maps.LatLng(16.404005, 102.815857)
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+
+    marker = new google.maps.Marker({
+      position: wellsave,
+      map: map,
+      title: 'Wellsave Furniture'
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+  
+</script>
+
+<style>
+  html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #map-canvas {
+    height: 400px;
+    width: 100%;
+  }
+</style>
