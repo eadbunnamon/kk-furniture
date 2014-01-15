@@ -23,6 +23,8 @@ FurnitureStore::Application.routes.draw do
       get :best_sellers
       get :promotions
       get :favorite
+      get :about
+      get :contact
     end
   end
 

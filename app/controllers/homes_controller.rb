@@ -24,4 +24,12 @@ class HomesController < ApplicationController
   def map
     
   end
+
+  def about
+    
+  end
+
+  def contact
+
+  end
 end
