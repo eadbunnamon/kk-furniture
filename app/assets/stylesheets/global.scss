@@ -17,8 +17,11 @@ h5 {
   font-style: italic;
 }
 
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+  border-width: 2px;
+}
+
 .head-bg {
-  border-bottom: 1px solid #E4E4E4;  
   background-color: #F5F5F5;
 
   .page {
@@ -52,6 +55,26 @@ h5 {
   overflow: hidden;
   background-color: #FFF;
   padding: 0 120px;
+}
+
+.head-bg {
+  /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #FFFFFF 50%, #6F36BA 200%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #FFFFFF 50%, #6F36BA 200%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(top, #FFFFFF 50%, #6F36BA 200%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #FFFFFF), color-stop(2, #6F36BA));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #FFFFFF 50%, #6F36BA 200%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #FFFFFF 50%, #6F36BA 200%);
 }
 
 .error {
@@ -159,6 +182,26 @@ h5 {
   border-top: 2px solid #B1B1B1;
   background-color: #F5F5F5;
   box-shadow: 1px 1px 10px #888888;
+}
+
+.footer-container {
+  /* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #FFFFFF 50%, #6F36BA 200%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(bottom, #FFFFFF 50%, #6F36BA 200%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(bottom, #FFFFFF 50%, #6F36BA 200%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, #FFFFFF), color-stop(2, #6F36BA));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(bottom, #FFFFFF 50%, #6F36BA 200%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top, #FFFFFF 50%, #6F36BA 200%);
 }
 
 #footer {
@@ -332,8 +375,8 @@ ul.main-thum li a.thumbnail:hover {
 
 .active {
   a {
-    border-color: #D4D4D4 !important;
-    background-color: #D4D4D4 !important;
+    border-color: #FFFFFF !important;
+    background-color: #FFFFFF !important;
   }
 }
 

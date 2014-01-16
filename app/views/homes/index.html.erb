@@ -54,21 +54,21 @@
 <!-- Promotion -->
 
 <div class="products product-items clearfix left">
-  <h5>ยอดชมมากที่สุด</h5>
+  <h5>สินค้ามาใหม่</h5>
   <table>
-  <% (@favorites || []).each_with_index do |fov, index| %>
+  <% (@new_arrivals || []).each_with_index do |product, index| %>
 
-  <% if index.to_i == (@favorites.count - 1) %>
+  <% if index.to_i == (@new_arrivals.count - 1) %>
     <tr class="no-bottom-border">
   <% else %>
     <tr>
   <% end %>
-      <td class="photos"><%= image_tag fov.photos.first.photo.thumb.url if fov.photos.first.present? %></td>
+      <td class="photos"><%= image_tag product.photos.first.photo.thumb.url if product.photos.first.present? %></td>
       <td class="pro-details">
-        <p class="bold fov-name"><%= fov.name %></p>
-        <p class='description'><%= truncate(fov.description, :length => 80) %></p>
-        <p><%= link_to "see more", product_path(fov, favorite: true), class: "more" %></p>
-        <span class='hidden'><%= fov.view %></span>
+        <p class="bold fov-name"><%= product.name %></p>
+        <p class='description'><%= truncate(product.description, :length => 80) %></p>
+        <p><%= link_to "see more", product_path(product, newest_products: true), class: "more" %></p>
+        <span class='hidden'><%= product.view %></span>
       </td>
     </tr>
   
