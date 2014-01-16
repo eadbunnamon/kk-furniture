@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
       @product_ids = Product.where(best_seller: true).map(&:id)
       @best_sellers = true
     elsif params[:newest_products].present?
-      @product_ids = Product.where("created_at > ?", Time.now - 30.days).map(&:id)
+      @product_ids = Product.order("created_at desc").limit(30).map(&:id)
       @newest_products = true
     elsif params[:favorite].present?
       @product_ids = Product.order("view DESC").map(&:id)
