@@ -11,6 +11,7 @@
         <p class="corner-left"><%= number_to_currency(product.price, unit: "฿", precision: 0) %></p>
         <%= image_tag product.photos.first.photo.thumb.url if product.photos.first.present? %>
         <p class="text-center product-name"><%= product.name %></p>
+        <span class='hidden'><%= product.view %></span>
       </a>    
     </li>
     <% end %>
