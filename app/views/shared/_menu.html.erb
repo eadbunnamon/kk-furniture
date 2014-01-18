@@ -1,7 +1,7 @@
 <div class='clearfix'>
   <div id="head-menu" class='clearfix left'>
     <ul class="nav nav-tabs">
-      <li class='<%= "active" if controller_name == "homes" %>'>
+      <li class='<%= "active" if controller_name == "homes" && action_name == "index" %>'>
         <%= link_to "หน้าหลัก", homes_path, class: "bold" %>
       </li>
       <li class='dropdown <%= "active" if controller_name == "categories" %>'>
@@ -30,10 +30,23 @@
   </div>
 
   <div class='other-link right'>
-    <%= link_to "คำถามที่พบบ่อย", faqs_path %>  
-    <%= link_to "ติดต่อเรา", contact_homes_path %>  
-    <%= link_to "แผนที่", map_homes_path %>  
-    <%= link_to "เกี่ยวกับเรา", about_homes_path %>
-    <%= link_to "sitemap", sitemaps_path, class: "border-none" %>
+
+    <ul class="nav nav-tabs">
+      <li class='<%= "active" if controller_name == "faqs" %>'>
+        <%= link_to "คำถามที่พบบ่อย", faqs_path %> 
+      </li>
+      <li class='<%= "active" if action_name == "contact" %>'>
+        <%= link_to "ติดต่อเรา", contact_homes_path %> 
+      </li>
+      <li class='<%= "active" if action_name == "map" %>'>
+        <%= link_to "แผนที่", map_homes_path %>  
+      </li>
+      <li class='<%= "active" if action_name == "about" %>'>
+        <%= link_to "เกี่ยวกับเรา", about_homes_path %>
+      </li>
+      <li class='<%= "active" if controller_name == "sitemaps" %>'>
+        <%= link_to "sitemap", sitemaps_path %>
+      </li>
+    </ul>  
   </div>
 </div>
