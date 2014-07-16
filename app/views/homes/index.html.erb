@@ -1,13 +1,12 @@
 <div id="myCarousel" class="carousel slid">
     <ol class="carousel-indicators">
 	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	    <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
     </ol>
     <!-- Carousel items -->
     <div class="carousel-inner">
-      <div class="active item"><%= image_tag "slide1.jpg", class: "img-slider" %></div>
-      <div class="item"><%= image_tag "logo_2.jpg", class: "img-slider" %></div>
-	    <!-- <div class="item"><%#= image_tag "slide3.jpg", class: "img-slider" %></div> -->
+      <div class="active item"><%= image_tag "logo_2.jpg", class: "img-slider" %></div>
+      <div class="item"><%= image_tag "map.png", class: "img-slider" %></div>
     </div>
     <!-- Carousel nav -->
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -20,33 +19,33 @@
 	<!-- <hr>	 -->
 </div>
 
-<div class="products clearfix">
-	<ul class="thumbnails main-thum">
-	    <li class="span4">
-        <%= link_to newest_products_homes_path, class: "thumbnail" do %>
+<div class="products clearfix left-right-15px">
+	<ul class="main-thum">
+	    <li>
+        <%= link_to newest_products_homes_path do %>
           <div class="image_group">
-            <%= image_tag @new_arrival_photo if @new_arrival_photo.present? %>
+            <%= image_tag "IMG_0021_1.jpg" %>
           </div>
-  		    <h5 class="text-center">สินค้ามาใหม่</h5>
-  		    <p class="text-center italic">หลากหลายรายการ รอให้คุณเลือกซื้อเลือกชม</p>
+  		    <!-- <h5 class="text-center">สินค้ามาใหม่</h5>
+  		    <p class="text-center italic">หลากหลายรายการ รอให้คุณเลือกซื้อเลือกชม</p> -->
 		    <% end %>
 	    </li>
-	    <li class="span4">
-		    <%= link_to promotions_homes_path, class: "thumbnail" do %>
+	    <li>
+		    <%= link_to promotions_homes_path do %>
           <div class="image_group">
-  		      <%= image_tag @promotion_photo if @promotion_photo.present? %>
+  		      <%= image_tag "IMG_0002_2.jpg" %>
           </div>
-  		    <h5 class="text-center">โปรโมชั่น</h5>
-  		    <p class="text-center italic">พบกับสินค้ามากมายลดราคาประจำเดือนนี้</p>
+  		    <!-- <h5 class="text-center">โปรโมชั่น</h5>
+  		    <p class="text-center italic">พบกับสินค้ามากมายลดราคาประจำเดือนนี้</p> -->
 		    <% end %>
 	    </li>
-	    <li class="span4">
-        <%= link_to best_sellers_homes_path, class: "thumbnail" do %>
+	    <li>
+        <%= link_to best_sellers_homes_path do %>
           <div class="image_group">
-  		      <%= image_tag @best_seller_photo if @best_seller_photo.present? %>
+  		      <%= image_tag "IMG_0109.jpg" %>
           </div>
-  		    <h5 class="text-center">สินค้าขายดี</h5>
-  		    <p class="text-center italic">สินค้ายอดนิยมที่ผู้คนเลือกซื้อ</p>
+  		    <!-- <h5 class="text-center">สินค้าขายดี</h5>
+  		    <p class="text-center italic">สินค้ายอดนิยมที่ผู้คนเลือกซื้อ</p> -->
 		    <% end %>
 	    </li>
     </ul>
@@ -54,7 +53,6 @@
 <!-- Promotion -->
 
 <div class="products product-items clearfix left">
-  <h5>สินค้ามาใหม่</h5>
   <table>
   <% (@new_arrivals || []).each_with_index do |product, index| %>
 
@@ -83,7 +81,6 @@
   <p class='indent'>wellsave จัดส่งสินค้าให้ลูกค้าฟรีในยอดการสั่งซื้อ 5,000 บาทขึ้นไป และ จัดส่งฟรีในระยะ 30 กิโลเมตร และ จะมีคิดค่าขนส่ง ในกรณีเกิน คิดเป็น 20 กิโลเมตร 300 บาท บริการจัดส่งภายในวันสั่งซื้อ (กรณีมีสินค้า )</p>
 </div>
 <div class="other-details">
-<p>Map</p>
   <div id="map-canvas"></div>
 </div>
 <div></div>

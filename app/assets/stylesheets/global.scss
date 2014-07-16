@@ -7,6 +7,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 13px;
+  background: #999;
 }
 
 h5 {
@@ -17,6 +18,11 @@ h5 {
   font-style: italic;
 }
 
+.dropdown-menu, .nav-tabs .dropdown-menu {
+  padding: 0;
+  border-radius: 0;
+}
+
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
   border-width: 2px;
 }
@@ -25,8 +31,15 @@ h5 {
   border-bottom: none;
 }
 
+.nav.nav-tabs > li {
+  height: 34px;
+}
+
 .head-bg {
-  background-color: #F5F5F5;
+  background-color: #FEDD00;
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 0 20px;
 
   .page {
     height: 100%;
@@ -41,40 +54,20 @@ h5 {
   padding: 0;
   margin: 0;
   position: relative;
-  background-color: #FFF;
+  background-color: #999;
   overflow: hidden;
   min-height: 76%;
 }
 
 #wrap {
   position: relative;
-  max-width: 960px;
+  max-width: 930px;
   width: 100%;
   min-height: 100%;
   margin: 0 auto; 
   overflow: hidden;
   background-color: #FFF;
-  padding: 0 120px;
-}
-
-.head-bg {
-  /* IE10 Consumer Preview */ 
-background-image: -ms-linear-gradient(top, #FFFFFF 50%, #e5e5e5 200%);
-
-/* Mozilla Firefox */ 
-background-image: -moz-linear-gradient(top, #FFFFFF 50%, #e5e5e5 200%);
-
-/* Opera */ 
-background-image: -o-linear-gradient(top, #FFFFFF 50%, #e5e5e5 200%);
-
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #FFFFFF), color-stop(2, #e5e5e5));
-
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-linear-gradient(top, #FFFFFF 50%, #e5e5e5 200%);
-
-/* W3C Markup, IE10 Release Preview */ 
-background-image: linear-gradient(to bottom, #FFFFFF 50%, #e5e5e5 200%);
+  padding: 0 20px;
 }
 
 .error {
@@ -179,36 +172,26 @@ background-image: linear-gradient(to bottom, #FFFFFF 50%, #e5e5e5 200%);
 .footer-container {
   height: 8%;
   overflow: hidden;
-  border-top: 2px solid #B1B1B1;
-  background-color: #F5F5F5;
-  box-shadow: 1px 1px 10px #888888;
+  background-color: #999;
 }
 
-.footer-container {
-  /* IE10 Consumer Preview */ 
-background-image: -ms-linear-gradient(bottom, #FFFFFF 50%, #e5e5e5 200%);
-
-/* Mozilla Firefox */ 
-background-image: -moz-linear-gradient(bottom, #FFFFFF 50%, #e5e5e5 200%);
-
-/* Opera */ 
-background-image: -o-linear-gradient(bottom, #FFFFFF 50%, #e5e5e5 200%);
-
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, #FFFFFF), color-stop(2, #e5e5e5));
-
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-linear-gradient(bottom, #FFFFFF 50%, #e5e5e5 200%);
-
-/* W3C Markup, IE10 Release Preview */ 
-background-image: linear-gradient(to top, #FFFFFF 50%, #e5e5e5 200%);
+#sitemap {
+  max-width: 930px;
+  width: 100%;    
+  margin: 0 auto;
+  background-color: #FFF;
+  min-height: 100px;
+  padding: 20px;
 }
 
 #footer {
-  max-width: 960px;
+  max-width: 930px;
   width: 100%;    
-  margin: 15px auto;
+  margin: 0 auto;
   overflow: hidden;
+  background-color: #FEDD00;
+  min-height: 100px;
+  padding: 20px;
 }
 
 #footer-map {
@@ -347,7 +330,6 @@ a.border-none {
 }
 
 div.image_group {
-  height: 156px;
   margin: 0 auto;
   text-align: center;
 }
@@ -510,4 +492,52 @@ div.suggestion, .p-details {
 
 .indent {
   text-indent: 30px;
+}
+
+#sub-footer {
+  max-width: 930px;
+  width: 100%;    
+  margin: 0 auto;
+  background-color: #FFF;
+  min-height: 100px;
+  padding: 20px;
+
+  #home_sitemap {
+    display: inline-block;
+    width: 560px;
+
+    .site-group {
+      display: inline-block;
+      width: 180px;
+      vertical-align: top;
+
+      label {
+        cursor: default;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0 0 10px 0;
+
+        li {
+          cursor: pointer;
+          color: #666;
+        }
+
+        li:hover {
+          color: #19B2C5;
+        }
+      }
+    }
+  }
+
+  #home_delivery {
+    vertical-align: top;
+    display: inline-block;
+    width: 360px;
+  }
+}
+
+.reference {
+  font-size: 9px;
 }

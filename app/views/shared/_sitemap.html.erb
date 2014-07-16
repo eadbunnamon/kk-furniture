@@ -1,0 +1,21 @@
+<!-- @sitemap from application_controller.rb -->
+<div id='sub-footer'>
+  <div id='home_sitemap'>
+    <% @sitemap.each do |header, members| %>
+      <div class='site-group'>
+        <label><%= header %></label>
+        <ul>
+          <% members.each do |member| %>
+            <li><%= member %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+  <div id='home_delivery'>
+    <%= image_tag "delivery.jpg", class: "delivery" %>
+    <label class='reference'>
+      (temporary image from http://www.resumeok.com/home-delivery-resume-examples)
+    </label>
+  </div>
+</div>
