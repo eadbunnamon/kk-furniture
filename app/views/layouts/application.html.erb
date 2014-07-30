@@ -37,10 +37,10 @@
     <div class='content'>
       <%= yield %>
     </div>
+    <%= "<hr />".html_safe unless (controller == "homes" && action == "index") %>
   </div>
+  <%= render partial: "shared/sitemap" %>
 </div>
-
-<%= render partial: "shared/sitemap" %>
 
 <div class='footer-container page'>
   <%= render partial: "shared/footer" %>
