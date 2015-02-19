@@ -28,7 +28,7 @@ FurnitureStore::Application.routes.draw do
     end
   end
 
-  resources :products, only: [:show] do
+  resources :products, only: [:show, :index] do
     collection do
       get :search
     end
