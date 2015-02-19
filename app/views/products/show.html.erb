@@ -55,22 +55,26 @@
 <br>
 </div>
 
-<% if @product.detail.present? %>
-<div class="suggestion">
-	<p class="bold">รายละเอียด</p>
-</div>
+<div>
 
-<div class="well p-details">
-	<p><%= @product.detail.gsub(/\n/, '<br>').html_safe %></p>
-</div>
-<% end %>
+  <div class="suggestion">
+    <p class="bold">ราคา</p>
+  </div>
 
-<div class="suggestion">
-	<p class="bold">ราคา</p>
-</div>
+  <div class="well p-details">
+    <p><%= number_to_currency(@product.price, unit: "฿", precision: 0) %></p>
+  </div>
+  
+  <% if @product.detail.present? %>
+  <div class="suggestion">
+  	<p class="bold">รายละเอียด</p>
+  </div>
 
-<div class="well p-details">
-	<p><%= number_to_currency(@product.price, unit: "฿", precision: 0) %></p>
+  <div class="well p-details">
+  	<p><%= @product.detail.gsub(/\n/, '<br>').html_safe %></p>
+  </div>
+  <% end %>
+
 </div>
 
 <div class="product-details">
