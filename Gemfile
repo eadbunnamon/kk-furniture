@@ -38,7 +38,6 @@ group :development, :test do
   gem 'railroady'
   gem 'shoulda-matchers', '1.4.1'
   gem 'factory_girl_rails'
-  gem 'mocha', require: 'mocha_standalone'
   gem 'database_cleaner'
 end
 
