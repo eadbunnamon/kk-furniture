@@ -27,8 +27,8 @@ gem 'carrierwave'
 gem "rmagick", "~> 2.13.2"
 
 gem 'capistrano'
-gem 'rvm-capistrano'
-gem "mysql2"
+gem 'rvm-capistrano',  require: false
+gem "mysql2", '0.3.11'
 
 group :development, :test do
   # gem 'capybara'
